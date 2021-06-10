@@ -9,7 +9,7 @@ const MealsProvider = ({ children }) => {
 
    useEffect(() => {
       const fetchMeals = async () => {
-         const response = await fetch('https://food-order-70879-default-rtdb.europe-west1.firebasedatabase.app/meals.json');
+         const response = await fetch(`${process.env.REACT_APP_API_KEY_MEAL}`);
 
          if (!response.ok) {
             throw new Error('Something went wrong!');
